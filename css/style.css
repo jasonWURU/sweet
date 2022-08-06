@@ -1,24 +1,27 @@
 body {
-    font-family: PingFang;
+    font-family: PingFang , sans-serif;
 }
 
 .container {
     max-width: 1024px;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
     padding: 0 42px;
-    /* border: 1px solid; */
 }
 
 .textLr {
-    writing-mode: vertical-lr 
+    writing-mode: vertical-lr;
 }
 
 ._mobile {
     display: none;
 }
 
+
+
 .headerWrap {
     padding: 30px 0;
+    border: 1px solid;
 }
 
 .headerWrap .inner {
@@ -78,7 +81,6 @@ body {
 
 .bannerWrap {
     overflow: hidden;
-    position: relative;
 }
 
 .topSection {
@@ -89,7 +91,6 @@ body {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    object-fit: cover;
     height: 496px;
     width: 1024px;
     background-image: url(../img/HomePicture.jpg);
@@ -98,9 +99,17 @@ body {
     background-position: center center;
 }
 
+.bannerImg {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1024px;
+    height: auto;
+    object-fit: cover;
+}
+
 .cardGroup {
     display: flex;
-    justify-content: center;
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -151,28 +160,118 @@ body {
 .rowSection {
    background-color: #EAF0ED;
    height: 420px;
-   margin-top: 200px;
+   margin-top: 247px;
 }
 
 .inforWrap {
     display: flex;
-}
-
-.inforWrap .content {
-    width: 256px;
+    /* justify-content: space-between; */
 }
 
 .inforWrap .image {
     display: inline-block;
-    width: 460px;
-    height: 460px;
     transform: translateY(-20px);
+    margin-right: 55px;
 }
 
 .inforWrap .image img{
-    width: 100%;
-    height: 100%;
+    width: 460px;
+    height: 460px;
     object-fit: cover;
+}
+
+.inforWrap .content {
+    width: 256px;
+    white-space: wrap;
+    height: 280px;
+    color: #8DA291;
+    margin: 70px 0;
+    margin-right: 80px;
+}
+
+
+
+.inforWrap .content p{
+    line-height: 30px;
+    font-weight: 300;
+    margin: 0;
+}
+
+.inforWrap .title {
+    color:#3F5D45;
+    font-size: 32px;
+    letter-spacing: 10px;
+    position: relative;
+    top: -20px;
+}
+
+/* 螢幕寬度為 768px 以下 */
+
+@media (max-width: 1000px) {
+
+    .m_order1 {
+        order: 1;
+    }
+    
+    .m_order2 {
+        order: 2;
+    }
+    
+    .m_order3 {
+        order: 3;
+    }
+
+    .rowSection {
+        height: initial;
+        background-color: initial;
+        margin-top: 130px;
+    }
+
+    .rowSection .textLr{
+        writing-mode: initial;
+    }
+
+    .inforWrap {
+        flex-direction: column;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .inforWrap .title{
+        font-size: 24px;
+        text-align: center;
+        margin: 30px 0;
+        position: initial;
+        top: initial;
+    }
+
+    .inforWrap .image {
+        margin-right: initial;
+        transform: initial;
+        width: 100%;
+        display:flex;
+    }
+
+    .inforWrap .image img{
+        width: 100%;
+        height: 100%;
+        aspect-ratio: 375/250; 
+        object-fit: cover;
+    }
+
+    .inforWrap .content {
+        width: 100%;
+        color: #8DA291;
+        margin: 0;
+        padding: 30px;
+        height: initial;
+        background-color: #EAF0ED;
+        box-sizing: border-box;
+    }
+    
+    .inforWrap .content p{
+        line-height: 30px;
+    }
 }
 
 /* 螢幕寬度為 768px 以下 */
@@ -202,8 +301,6 @@ body {
     }
 
     .cardGroup {
-        display: flex;
-        justify-content: center;
         bottom: initial;
         left: initial;
         transform: initial;
@@ -216,5 +313,17 @@ body {
 
     .card .inner{
         width: 100%;
+        height: 180px;
+    }
+
+    .rowSection {
+        margin-top: 0;
+    }
+}
+
+
+p {
+    span{
+    
     }
 }
