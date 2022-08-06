@@ -1,0 +1,220 @@
+body {
+    font-family: PingFang;
+}
+
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0 42px;
+    /* border: 1px solid; */
+}
+
+.textLr {
+    writing-mode: vertical-lr 
+}
+
+._mobile {
+    display: none;
+}
+
+.headerWrap {
+    padding: 30px 0;
+}
+
+.headerWrap .inner {
+   display: flex;
+   justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    height: 40px;
+}
+
+.logo img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.headerLeft {
+    display: flex;
+    align-items: center;
+}
+
+.headerWrap .cart {
+    display: inline-flex;
+    height: 24px;
+}
+
+.headerWrap .cart img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    vertical-align: middle;
+}
+
+.navbar ul {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.navbar li {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 60px;
+    height: 40px;
+}
+
+.navbar a {
+    text-decoration: none;
+    letter-spacing: 0;
+    display: inline-block;
+    color: #3F5D45;
+    font-weight: bold;
+}
+
+.bannerWrap {
+    overflow: hidden;
+    position: relative;
+}
+
+.topSection {
+    position: relative;
+}
+
+.banner {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    object-fit: cover;
+    height: 496px;
+    width: 1024px;
+    background-image: url(../img/HomePicture.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.cardGroup {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+.card {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: #fff;
+    letter-spacing: 4px;
+}
+
+.card.active {
+    color: #3F5D45;
+}
+
+.card.picTodayBest {
+    background-image: url(../img/todayBest.png);
+}
+
+.card.picPopular {
+    background-image: url(../img/popular.png);
+}
+
+.card.picNewGoods {
+    background-image: url(../img/newGoods.png);
+}
+
+.card .inner{
+    width: 256px;
+    height: 256px;
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    background-color: #3F5D45d0;
+}
+
+
+.card.active .inner{
+    background-color: #ffe180d0;
+}
+
+
+.rowSection {
+   background-color: #EAF0ED;
+   height: 420px;
+   margin-top: 200px;
+}
+
+.inforWrap {
+    display: flex;
+}
+
+.inforWrap .content {
+    width: 256px;
+}
+
+.inforWrap .image {
+    display: inline-block;
+    width: 460px;
+    height: 460px;
+    transform: translateY(-20px);
+}
+
+.inforWrap .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 螢幕寬度為 768px 以下 */
+@media screen and (max-width: 768px) {
+
+    ._desktop {
+        display: none;
+    }
+
+    ._mobile {
+        display: block;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .m_banner {
+        font-size: 0;
+        aspect-ratio: 375 / 277; 
+    }
+
+    .m_banner img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .cardGroup {
+        display: flex;
+        justify-content: center;
+        bottom: initial;
+        left: initial;
+        transform: initial;
+        position: initial;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .card .inner{
+        width: 100%;
+    }
+}
